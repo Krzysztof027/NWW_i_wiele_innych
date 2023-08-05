@@ -86,9 +86,25 @@ namespace Uklady_3_08
 
         private void zmien_kolor_tekstu(object sender, RoutedEventArgs e)
         {
-            liczba1.Background = new SolidColorBrush(Colors.LightBlue);
-            liczba2.Background = new SolidColorBrush(Colors.LightBlue);
+            liczba1.Background = new SolidColorBrush(Colors.LightCyan);//Dopisjemy do zmiennej kolor i tworzymy
+            liczba2.Background = new SolidColorBrush(Colors.LightCyan);
                 
+        }
+
+        private void Pokazliczby(object sender, RoutedEventArgs e)
+        {
+            if (liczba1 != liczba2)
+            {
+                MessageBox.Show("Rózne liczby" + " " + liczba1.Text + " " + liczba2.Text);
+
+                
+            }
+            
+        }
+
+        private void Graj(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -6,17 +6,19 @@
         xmlns:local="clr-namespace:Uklady_3_08"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <DockPanel>
+    <DockPanel Background="LightBlue" x:Name="Dock1">
         <Menu DockPanel.Dock="Top">
             <!--Otwieramy tło na górze-->
             <MenuItem Header="Plik">
             <MenuItem Header="Powieksz czcionkę" Click="Powieksz"></MenuItem>
             <MenuItem Header="Zapis do pliku" x:Name="zapis" Click="Zapisz"></MenuItem>
             <MenuItem Header="oblicz" Click="Oblicz"></MenuItem>
+                <MenuItem Header="Pokaz liczby" Click="Pokazliczby"></MenuItem>
             </MenuItem>
             <MenuItem Header="Koloruj">
                 <MenuItem Header="Zmien kolor tekstu" FontStyle="Oblique"  BorderBrush="Aqua" Click="zmien_kolor_tekstu"></MenuItem>
             </MenuItem>
+            <!--FontWeight-->
         </Menu>
         <TextBlock DockPanel.Dock="Top" FontWeight="Bold">Podaj tekst poniżej</TextBlock>
         <TextBox x:Name="tekstDoZapisu"  Width="200" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
@@ -71,6 +73,11 @@
             <!--Grid.ColumnSpan - Allows you to stretch 
             the column's cells across multiple columns
             within the grid's multi-row layout-->
+           
+            <Button Grid.Row="2" Grid.ColumnSpan="2" Padding="10" Background="Aqua"
+             Click="Graj" VerticalAlignment="Center" HorizontalAlignment="Center">Zagraj w QUIZ</Button>
+      
         </Grid>
+        
     </DockPanel>
 </Window>
